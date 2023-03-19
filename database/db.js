@@ -4,7 +4,7 @@ dotenv.config();
 
 const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
-const MONGO_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@mern-todo.l24nkel.mongodb.net/?retryWrites=true&w=majority`
+const MONGO_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@mern-todo.l24nkel.mongodb.net/test?retryWrites=true&w=majority`
 export const connectDB = async () => {
     try {
         const conn = await mongoose.connect(MONGO_URI, {
