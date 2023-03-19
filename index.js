@@ -10,7 +10,7 @@ app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use('/',Route);
 
-const PORT = 8000;
+const PORT = process.env.PORT || 5000;
 connectDB();
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
